@@ -214,12 +214,15 @@ a:focus-visible {
 }
 
 .project-list li {
+    border-top: 1px solid var(--line);
+}
+
+.project-link {
     min-height: 76px;
     display: grid;
-    grid-template-columns: 35px minmax(0, 1fr) 55px 20px;
+    grid-template-columns: 35px minmax(0, 1fr) 90px 20px;
     align-items: center;
     gap: 12px;
-    border-top: 1px solid var(--line);
     transition: color 180ms ease, padding 180ms ease;
 }
 
@@ -227,7 +230,7 @@ a:focus-visible {
     border-bottom: 1px solid var(--line);
 }
 
-.project-list li:hover {
+.project-link:hover {
     padding: 0 8px;
     color: var(--acid);
 }
@@ -236,6 +239,10 @@ a:focus-visible {
 .project-type {
     color: var(--muted);
     font: 10px var(--mono);
+}
+
+.project-type {
+    white-space: nowrap;
 }
 
 .project-name {
@@ -348,8 +355,8 @@ a:focus-visible {
         margin-top: 34px;
     }
 
-    .project-list li {
-        grid-template-columns: 26px minmax(0, 1fr) 34px 14px;
+    .project-link {
+        grid-template-columns: 26px minmax(0, 1fr) 72px 14px;
         gap: 8px;
         min-height: 68px;
     }
